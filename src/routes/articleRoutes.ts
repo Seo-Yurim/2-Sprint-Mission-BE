@@ -1,6 +1,6 @@
 import express from 'express';
-import articleController from '../controllers/article.controller.js';
-import articleCommentRoutes from './articleCommentRoutes.js';
+import articleController from '../controllers/article.controller';
+import articleCommentRoutes from './articleCommentRoutes';
 
 const router = express.Router();
 

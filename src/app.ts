@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv';
 import cors from 'cors';
 import productRoutes from './routes/product.route';
 import articleRoutes from './routes/articleRoutes';
-import { handleErrors } from './utils/globalErrorHandler';
+import { handleErrors } from './utils/handleErrors';
 import requestLogger from './utils/requestLogger';
 import responseLogger from './utils/responseLogger';
 

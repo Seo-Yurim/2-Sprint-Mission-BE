@@ -1,6 +1,6 @@
 import { assert } from 'superstruct';
 import { CreateProductComment, PatchProductComment } from '../structs';
-import { handleError } from '../utils/handleError.js';
+import { handleError } from '../utils/handleError';
 import { RequestHandler } from 'express';
 import productCommentService from '../services/productComment.service';
 

@@ -1,10 +1,19 @@
-const responseLogger = (req, res, next) => {
+import { NextFunction, Request, Response } from 'express';
+
+interface ResponseData {
+  id: string;
+  content: string;
+  createdAt: string;
+}
+
+const responseLogger = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void => {
   res.on('finish', () => {
-    console.log(
-      `[RESPONSE] ${res.statusCode} - Body: ${JSON.stringify(
-        res.locals.data || {}
-      )}`
-    );
+    const data: ResponseData = res.locals.data || ({} as ResponseData);
+    console.log(`[RESPONSE] ${res.statusCode} - Body: ${JSON.stringify(data)}`);
   });
   next();
 };

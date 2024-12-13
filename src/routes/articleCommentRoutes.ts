@@ -1,5 +1,5 @@
 import express from 'express';
-import articleCommentController from '../controllers/articleComment.controller.js';
+import articleCommentController from '../controllers/articleComment.controller';
 
 const router = express.Router({ mergeParams: true });
 
