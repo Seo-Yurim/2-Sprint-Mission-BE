@@ -1,7 +1,7 @@
 import prisma from '../models/articleModel.js';
 import { assert } from 'superstruct';
 import { CreateArticle, PatchArticle } from '../structs.js';
-import { handleError } from '../utils/handleError.js';
+import { handleError } from '../../utils/handleError.js';
 
 // 게시글 등록
 export const createArticle = async (req, res, next) => {
