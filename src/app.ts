@@ -1,6 +1,5 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
-dotenv.config();
 import cors from 'cors';
 import productRoutes from './routes/productRoutes.js';
 import articleRoutes from './routes/articleRoutes.js';
@@ -8,6 +7,7 @@ import { handleErrors } from './utils/globalErrorHandler.js';
 import requestLogger from './utils/requestLogger.js';
 import responseLogger from './utils/responseLogger.js';
 
+dotenv.config();
 const app = express();
 
 const corsOptions = {
