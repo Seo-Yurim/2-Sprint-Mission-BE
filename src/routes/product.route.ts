@@ -1,6 +1,6 @@
 import express from 'express';
-import productController from '../controllers/product.controller.js';
-import productCommentRoutes from './productCommentRoutes.js';
+import productController from '../controllers/product.controller';
+import productCommentRoutes from './productComment.route';
 
 const router = express.Router();
 

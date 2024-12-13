@@ -17,7 +17,9 @@ export const CreateArticleComment = s.object({
 });
 
 export const CreateProductComment = s.object({
-  content: s.string()
+  content: s.string(),
+  productId: s.string(),
+  ownerUserId: s.string()
 });
 
 export const PatchProduct = s.partial(CreateProduct);
