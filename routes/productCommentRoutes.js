@@ -4,7 +4,7 @@ import {
   updateProductComment,
   deleteProductComment,
   getProductComments
-} from '../controllers/ProductCommentController.js';
+} from '../controllers/productCommentController.js';
 
 const router = express.Router({ mergeParams: true });
 
