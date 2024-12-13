@@ -13,7 +13,9 @@ export const CreateArticle = s.object({
 });
 
 export const CreateArticleComment = s.object({
-  content: s.string()
+  content: s.string(),
+  articleId: s.string(),
+  ownerUserId: s.string()
 });
 
 export const CreateProductComment = s.object({
