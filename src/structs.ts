@@ -24,3 +24,12 @@ export const PatchProduct = s.partial(CreateProduct);
 export const PatchArticle = s.partial(CreateArticle);
 export const PatchArticleComment = s.partial(CreateArticleComment);
 export const PatchProductComment = s.partial(CreateProductComment);
+
+export type CreateProduct = s.Infer<typeof CreateProduct>;
+export type CreateArticle = s.Infer<typeof CreateArticle>;
+export type CreateArticleComment = s.Infer<typeof CreateArticleComment>;
+export type CreateProductComment = s.Infer<typeof CreateProductComment>;
+export type PatchProduct = s.Infer<typeof PatchProduct>;
+export type PatchArticle = s.Infer<typeof PatchArticle>;
+export type PatchArticleComment = s.Infer<typeof PatchArticleComment>;
+export type PatchProductComment = s.Infer<typeof PatchProductComment>;

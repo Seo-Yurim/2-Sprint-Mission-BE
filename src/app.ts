@@ -1,7 +1,7 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
-import productRoutes from './routes/productRoutes';
+import productRoutes from './routes/product.route';
 import articleRoutes from './routes/articleRoutes';
 import { handleErrors } from './utils/globalErrorHandler';
 import requestLogger from './utils/requestLogger';
