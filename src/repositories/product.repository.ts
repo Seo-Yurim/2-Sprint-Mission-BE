@@ -3,7 +3,7 @@ import { CreateProduct, PatchProduct } from '../structs';
 import { GetItemsQuery } from '../types/query.type';
 
 // Post
-const createProductRepository = async (data: CreateProduct) => {
+const createProduct = async (data: CreateProduct) => {
   const productData = {
     name: data.name,
     description: data.description,
@@ -17,7 +17,7 @@ const createProductRepository = async (data: CreateProduct) => {
 };
 
 // Get By ID
-const getProductByIdRepository = async (id: string) => {
+const getProductById = async (id: string) => {
   return await prisma.product.findUniqueOrThrow({
     where: { id },
     include: {
@@ -33,7 +33,7 @@ const getProductByIdRepository = async (id: string) => {
 };
 
 // Patch
-const updateProductRepository = async (id: string, data: PatchProduct) => {
+const updateProduct = async (id: string, data: PatchProduct) => {
   return await prisma.product.update({
     where: { id },
     data
@@ -41,14 +41,14 @@ const updateProductRepository = async (id: string, data: PatchProduct) => {
 };
 
 // Delete
-const deleteProductRepository = async (id: string) => {
+const deleteProduct = async (id: string) => {
   return await prisma.product.delete({
     where: { id }
   });
 };
 
 // Get All
-const getProductsRepository = async (query: GetItemsQuery) => {
+const getProducts = async (query: GetItemsQuery) => {
   const { page = 1, pageSize = 10, order = 'recent', keyword = '' } = query;
 
   const offset = (page - 1) * pageSize;
@@ -73,9 +73,9 @@ const getProductsRepository = async (query: GetItemsQuery) => {
 };
 
 export default {
-  createProductRepository,
-  getProductByIdRepository,
-  updateProductRepository,
-  deleteProductRepository,
-  getProductsRepository
+  createProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+  getProducts
 };
