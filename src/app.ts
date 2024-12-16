@@ -2,7 +2,7 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
 import productRoutes from './routes/product.route';
-import articleRoutes from './routes/articleRoutes';
+import articleRoutes from './routes/article.route';
 import { handleErrors } from './utils/handleErrors';
 import requestLogger from './utils/requestLogger';
 import responseLogger from './utils/responseLogger';
